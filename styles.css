@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    margin: 20px;
+}
+.screen {
+    display: none;
+}
+.visible {
+    display: block;
+}
+.black-card, .white-card, .chosen-white-card, .chosen-black-card {
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+.black-card {
+    background: #000;
+    color: #fff;
+}
+.white-card {
+    background: #fff;
+    color: #000;
+}
+.chosen-black-card {
+    background: #333;
+    color: #fff;
+}
+.chosen-white-card {
+    background: #fff;
+    color: #000;
+}
+.players-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+.player-section {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    width: 220px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background: #333;
+}

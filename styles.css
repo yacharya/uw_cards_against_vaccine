@@ -3,48 +3,90 @@ body {
     background: #f4f4f4;
     margin: 20px;
 }
+
 .screen {
     display: none;
 }
+
 .visible {
     display: block;
 }
-.black-card, .white-card, .chosen-white-card, .chosen-black-card {
+
+/* Ensure the black cards container uses flexbox for alignment */
+#black-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center the cards horizontally */
+    gap: 10px;
+    /* Add some space between the cards */
+    margin: 20px 0;
+    /* Add some margin for better spacing */
+}
+
+.black-card,
+.white-card,
+.chosen-white-card,
+.chosen-black-card {
     border: 2px solid #000;
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
-    display: inline-block;
     width: 200px;
-    height: 150px;
-    text-align: center;
     font-size: 18px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     cursor: pointer;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    flex: 0 0 200px;
+    /* Fixed width for each card */
+    height: 150px;
+    /* Fixed height for each card */
+    display: flex;
+    align-items: center;
+    /* Center text vertically */
+    justify-content: center;
+    /* Center text horizontally */
+    text-align: center;
+    /* Ensure text is centered */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
 }
+
 .black-card {
     background: #000;
     color: #fff;
 }
+
+/* Optional: Add a minimum height for the black card text to prevent misalignment */
+.black-card p {
+    margin: 0;
+    /* Remove default margin */
+    padding: 10px;
+    /* Add some padding for better readability */
+}
+
 .white-card {
     background: #fff;
     color: #000;
 }
+
 .chosen-black-card {
     background: #333;
     color: #fff;
 }
+
 .chosen-white-card {
     background: #fff;
     color: #000;
 }
+
 .players-container {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
     justify-content: center;
 }
+
 .player-section {
     border: 1px solid #ccc;
     margin: 10px;
@@ -52,12 +94,14 @@ body {
     width: 220px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 .controls {
     margin-top: 20px;
     text-align: center;
 }
+
 button {
     padding: 10px 20px;
     margin: 5px;
@@ -68,14 +112,17 @@ button {
     border: none;
     border-radius: 5px;
 }
+
 button:hover {
     background: #333;
 }
+
 /* Logo styling */
 .logo-container {
     text-align: center;
     margin-bottom: 20px;
 }
+
 #logo {
     max-width: 150px;
     width: 100%;
@@ -94,7 +141,8 @@ button:hover {
     border-radius: 8px;
     text-align: center;
     align-items: center;
-    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    overflow-x: auto;
+    /* Allow horizontal scrolling if necessary */
 }
 
 .instruction-container {

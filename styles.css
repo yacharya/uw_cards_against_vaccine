@@ -26,11 +26,13 @@ body {
 
 .black-card,
 .white-card,
+.grey-card,
 .chosen-white-card,
 .chosen-black-card {
     border: 2px solid #000;
+    overflow-y: auto;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     width: 200px;
     font-size: 18px;
@@ -58,15 +60,22 @@ body {
 }
 
 /* Optional: Add a minimum height for the black card text to prevent misalignment */
-.black-card p {
+.black-card p, .white-card p, .grey-card p {
     margin: 0;
     /* Remove default margin */
     padding: 10px;
     /* Add some padding for better readability */
+    overflow-y: auto;
+    max-height: 130px;
 }
 
 .white-card {
     background: #fff;
+    color: #000;
+}
+
+.grey-card {
+    background: #d3d3d3;
     color: #000;
 }
 
@@ -147,4 +156,91 @@ button:hover {
 
 .instruction-container {
     text-align: left;
+}
+
+/* Second Round Screen */
+#second-round-screen .second-round-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#second-round-screen .left-side,
+#second-round-screen .right-side {
+    flex: 1;
+}
+
+#second-round-screen .card-row {
+    margin-bottom: 20px;
+}
+
+#second-round-screen .card-container {
+    display: flex;
+    gap: 10px;
+    /* Space between cards */
+    justify-content: center;
+    /* Center the cards horizontally */
+}
+
+#second-round-screen .card-container .white-card,
+#second-round-screen .card-container .grey-card,
+#second-round-screen .card-container .black-card {
+    flex: 0 0 200px;
+    /* Fixed width for each card */
+    overflow-y: auto;
+    padding: 10px;
+    height: 150px;
+    /* Fixed height for each card */
+    display: flex;
+    align-items: center;
+    /* Center text vertically */
+    justify-content: center;
+    /* Center text horizontally */
+    text-align: center;
+    /* Ensure text is centered */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    cursor: pointer;
+    /* Add pointer cursor to indicate clickability */
+}
+
+#second-round-screen .selected-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#second-round-screen .selected-card {
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#second-round-screen .selected-card.white-card {
+    background: #fff;
+    color: #000;
+}
+
+#second-round-screen .selected-card.grey-card {
+    background: #ccc;
+    color: #000;
+}
+
+#second-round-screen .selected-card.black-card {
+    background: #000;
+    color: #fff;
+}
+
+#second-round-screen #submitSecondRoundBtn {
+    margin-top: 20px;
+}
+
+#second-round-screen #successMessage {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
 }

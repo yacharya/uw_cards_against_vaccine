@@ -55,7 +55,51 @@
 
       <div class="controls">
         <button id="nextRoundBtn">Next Round</button>
-        <button id="endGameBtn">End Game</button>
+        <button id="secondRoundBtn">Second Round</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Round Screen -->
+  <div id="second-round-screen" class="screen">
+    <div class="logo-container">
+      <img src="uw-tips.png" alt="App Logo" id="logo">
+    </div>
+    <div class="container">
+      <h1>Second Round</h1>
+      <div class="second-round-container">
+        <!-- Left Side: Three Rows of Cards -->
+        <div class="left-side">
+          <div class="card-row">
+            <h3>White Cards</h3>
+            <div id="white-cards-second-round" class="card-container"></div>
+          </div>
+          <div class="card-row">
+            <h3>Grey Cards</h3>
+            <div id="grey-cards-second-round" class="card-container"></div>
+          </div>
+          <div class="card-row">
+            <h3>Black Cards</h3>
+            <div id="black-cards-second-round" class="card-container"></div>
+          </div>
+        </div>
+
+        <!-- Right Side: Selected Cards -->
+        <div class="right-side">
+          <h3>Selected Cards</h3>
+          <div id="selected-cards-container">
+            <div id="selected-white-card" class="selected-card"></div>
+            <div id="selected-grey-card" class="selected-card"></div>
+            <div id="selected-black-card" class="selected-card"></div>
+          </div>
+          <button id="submitSecondRoundBtn" style="display: none;">Submit</button>
+          <p id="successMessage" style="display: none;">Great job!</p>
+        </div>
+      </div>
+
+      <!-- End Game Button -->
+      <div class="controls">
+        <button id="endSecondRoundBtn">End Game</button>
       </div>
     </div>
   </div>
@@ -73,6 +117,7 @@
       <button id="restartBtn">Play Again</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 

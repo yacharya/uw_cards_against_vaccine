@@ -1,44 +1,75 @@
 // Example card data
 const blackCardsCollection = [
-    "10% of Participants experience ____",
-    "One in five agree,",
-    "New studies claim vaccines cause ____.",
-    "Wipe your tears",
-    "Just for me"
+    "10% of Participants experience ___",
+    "Heartbreaking Tragedy After Vaccination: Innocent Children Suffer ___",
+    "Secret Government Plot? Experts Warn Monkey Pox Vaccine Could Lead To ___",
+    "New studies claim vaccines cause ____. What does it mean for ____?",
+    "40% of ___ Experience ___ After Vaccination",
+    "One in Five ___ Agree That the Covid-19 Vaccine Leads to ____",
+    "Alarming Spike in ___ Following Booster Rollout",
+    "Scientists Divided: Could HPV Vaccines Cause ___",
+    "Popular Dentist Influencer Highlights Link Between Vaccines and ___",
+    "Majority of Vaccine Recipients Report Feeling ___ —Is It Worth the Risk?",
+    "25% of People Report ___ After Getting Vaccinated—What Are We Not Being Told?",
+    "Groundbreaking New Study Finding: Vaccines Linked to ___",
+    "Shocking: ___ Found to Have ___ After Flu Vaccine",
+    "___ Warns: Long-term Impacts of RSV Vaccine Still Unknown",
+    "Official Data Reveals 10% Increase in ___ Following Vaccine Rollout",
+    "Half of All ___ Show Signs of ___ Due to Vaccination",
+    "One in 9 ___ Admit They Regret Getting Covid Booster",
+    "Popular YouTuber Says They’ve Uncovered “Proof” of Link Between Vaccines and ___",
+    "Viral Post Warns of ___ Caused by Flu Vaccine",
+    "___ Question: Why Are They Pushing Covid Boosters So Hard?"
 ];
 
 const whiteCardsCollection = [
-    "Funny answer 1",
-    "Funny answer 2",
-    "Funny answer 3",
-    "Funny answer 4",
-    "Funny answer 5",
-    "Funny answer 6",
-    "Funny answer 7",
-    "Funny answer 8",
-    "Funny answer 9",
-    "Funny answer 10",
-    "Funny answer 11",
-    "Funny answer 12",
-    "Funny answer 13",
-    "Funny answer 14",
-    "Funny answer 15",
-    "Funny answer 16"
+    "Population Control",
+    "Color Changing Skin",
+    "Involuntary Dance",
+    "Spontaneous Combustion",
+    "Allergic Reactions",
+    "Behavioral Change",
+    "Deep Sadness",
+    "The Future",
+    "Children",
+    "Death",
+    "Regret",
+    "Old Age",
+    "Low Self Esteem",
+    "Dentists",
+    "Chiropractors",
+    "Mothers",
+    "Dancers",
+    "Soreness",
+    "Complications",
+    "Sleepiness",
+    "Doctors",
+    "Extreme Joy",
+    "Heartbreak",
+    "Disease",
+    "Unknown Effects",
+    "Liver Problems",
+    "Unexplained Illness",
+    "Famous Podcaster",
+    "TikToker",
+    "Long-term Problems"
 ];
 
 // Second Round card data
 const whiteCardsSecondRound = [
-    "Second Round White 1",
-    "Second Round White 2",
-    "Second Round White 3",
-    "Second Round White 4"
+    "Fake /Unknown/ Uncredible experts: hiding or fabricating the credentials of quoted experts or relying on sources who have adjacent but not professional or expert knowledge",
+    "Conspiracy theories: suggests events are part of larger, connected plans by powerful groups or individuals.",
+    "Emotional appeals: specifically targeting someone’s feelings, particularly negative ones e.g. fear, anger, despair",
+    "Manufacturing social consensus: creating a false sense of social (dis)agreement by amplifying select voices",
+    "Cherry-picking data: choosing data selectively to create a certain outcome e.g. only showing the best or worst results to support your argument"
 ];
 
 const greyCardsSecondRound = [
-    "Second Round Grey 1",
-    "Second Round Grey 2",
-    "Second Round Grey 3",
-    "Second Round Grey 4"
+    "Dentists are not experts in immunology or cardiology and so do not have the professional expertise to make such a claim. Further, there are no peer-reviewed studies linking vaccines to heart murmurs, instead there exists scientific consensus on the safety and efficacy of vaccines.",
+    "Flu vaccines are designed to reduce the severity of illness and the risk of complications, not guarantee complete immunity. Some people can still contract a flu strain not covered by the vaccine or have partial protection due to individual immune response variability.",
+    "Headlines can often cherry pick survey results, the majority of people (in the survey mentioned in the headline) and in real life have no regrets post-vaccination. COVID boosters have been shown to reduce severe illness and save lives, as supported by extensive global studies.",
+    "Extensive research and clinical studies have shown that vaccines, including those for HPV and COVID-19, have no adverse effects on fertility in men or women. Most scientists agree on their safety and effectiveness in preventing HPV-related cancers.",
+    "Migraines can occur for many reasons and are not a known side effect of vaccines. While any health issue in children is concerning, headlines can often activate and weaponize our emotional responses, particularly focusing on our desire to protect vulnerable populations. "
 ];
 
 const blackCardsSecondRound = [

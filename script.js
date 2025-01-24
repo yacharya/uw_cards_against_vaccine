@@ -287,6 +287,30 @@ function endGame() {
 
 // Restart the game
 function restartGame() {
+    // Reset Second Round state
+    selectedWhiteCardSecondRound = null;
+    selectedGreyCardSecondRound = null;
+    selectedBlackCardSecondRound = null;
+
+    // Hide the "Submit" button and "Great job!" message
+    submitSecondRoundBtn.style.display = 'none';
+    successMessage.style.display = 'none';
+
+    // Clear the selected cards display
+    selectedWhiteCardDiv.textContent = "Select a White Card";
+    selectedGreyCardDiv.textContent = "Select a Grey Card";
+    selectedBlackCardDiv.textContent = "Select a Black Card";
+
+    // Reset the game state
+    currentScreen = 'introduction';
+    numPlayers = 2;
+    scores = [];
+    chosenBlackCard = null;
+    chosenWhiteCards = [];
+    playerHands = [];
+    roundBlackCards = [];
+
+    // Show the introduction screen
     showScreen('introduction');
 }
 
@@ -297,7 +321,9 @@ function renderSecondRound() {
     whiteCardsSecondRound.slice(0, 3).forEach((card) => {
         const div = document.createElement('div');
         div.className = 'white-card';
-        div.textContent = card;
+        const p = document.createElement('p');
+        p.textContent = card;
+        div.appendChild(p); // Wrap the text in a p tag
         div.addEventListener('click', () => selectCard('white', card));
         whiteCardsSecondRoundContainer.appendChild(div);
     });
@@ -307,7 +333,9 @@ function renderSecondRound() {
     greyCardsSecondRound.slice(0, 3).forEach((card) => {
         const div = document.createElement('div');
         div.className = 'grey-card';
-        div.textContent = card;
+        const p = document.createElement('p');
+        p.textContent = card;
+        div.appendChild(p); // Wrap the text in a p tag
         div.addEventListener('click', () => selectCard('grey', card));
         greyCardsSecondRoundContainer.appendChild(div);
     });
@@ -317,7 +345,9 @@ function renderSecondRound() {
     blackCardsSecondRound.slice(0, 3).forEach((card) => {
         const div = document.createElement('div');
         div.className = 'black-card';
-        div.textContent = card;
+        const p = document.createElement('p');
+        p.textContent = card;
+        div.appendChild(p); // Wrap the text in a p tag
         div.addEventListener('click', () => selectCard('black', card));
         blackCardsSecondRoundContainer.appendChild(div);
     });
@@ -337,12 +367,17 @@ function renderSecondRound() {
 
 // Select a card in the Second Round
 function selectCard(type, card) {
+    const p = document.createElement('p');
     if (type === 'white') {
-        selectedWhiteCardSecondRound = card;
+        p.textContent = card;
+        selectedWhiteCardSecondRound = p.textContent;
+        p.textContent = card;
     } else if (type === 'grey') {
-        selectedGreyCardSecondRound = card;
+        p.textContent = card;
+        selectedGreyCardSecondRound = p.textContent;
     } else if (type === 'black') {
-        selectedBlackCardSecondRound = card;
+        p.textContent = card;
+        selectedBlackCardSecondRound = p.textContent;
     }
     renderSecondRound();
 }

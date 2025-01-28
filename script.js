@@ -1,21 +1,21 @@
 // Example card data
 const blackCardsCollection = [
-    "10% of Participants experience ___",
+    "10% of Study Participants Experience ___",
     "Heartbreaking Tragedy After Vaccination: Innocent Children Suffer ___",
     "Secret Government Plot? Experts Warn Monkey Pox Vaccine Could Lead To ___",
-    "New studies claim vaccines cause ____. What does it mean for ____?",
-    "40% of ___ Experience ___ After Vaccination",
-    "One in Five ___ Agree That the Covid-19 Vaccine Leads to ____",
+    "New Studies Claim Vaccines Cause ____. What does it mean for children?",
+    "40% of People Experience ___ After Vaccination",
+    "One in Five ___ Agree That the Covid-19 Vaccine Leads to Fatigue",
     "Alarming Spike in ___ Following Booster Rollout",
     "Scientists Divided: Could HPV Vaccines Cause ___",
     "Popular Dentist Influencer Highlights Link Between Vaccines and ___",
     "Majority of Vaccine Recipients Report Feeling ___ —Is It Worth the Risk?",
     "25% of People Report ___ After Getting Vaccinated—What Are We Not Being Told?",
     "Groundbreaking New Study Finding: Vaccines Linked to ___",
-    "Shocking: ___ Found to Have ___ After Flu Vaccine",
+    "Shocking: ___ Found to Have Heart Murmurs After Flu Vaccine",
     "___ Warns: Long-term Impacts of RSV Vaccine Still Unknown",
     "Official Data Reveals 10% Increase in ___ Following Vaccine Rollout",
-    "Half of All ___ Show Signs of ___ Due to Vaccination",
+    "Half of All Cancer Patients Show Signs of ___ Due to Vaccination",
     "One in 9 ___ Admit They Regret Getting Covid Booster",
     "Popular YouTuber Says They’ve Uncovered “Proof” of Link Between Vaccines and ___",
     "Viral Post Warns of ___ Caused by Flu Vaccine",
@@ -97,6 +97,7 @@ let selectedBlackCardSecondRound = null;
 // DOM elements
 const introductionScreen = document.getElementById('introduction-screen');
 const gameScreen = document.getElementById('game-screen');
+const secondRoundIntroScreen = document.getElementById('second-round-intro-screen');
 const secondRoundScreen = document.getElementById('second-round-screen');
 const gameOverScreen = document.getElementById('game-over-screen');
 
@@ -109,6 +110,7 @@ const finalScoresList = document.getElementById('final-scores-list');
 
 const startGameBtn = document.getElementById('startGameBtn');
 const nextRoundBtn = document.getElementById('nextRoundBtn');
+const secondRoundIntroBtn = document.getElementById('secondRoundIntroBtn');
 const secondRoundBtn = document.getElementById('secondRoundBtn');
 const endSecondRoundBtn = document.getElementById('endSecondRoundBtn');
 const submitSecondRoundBtn = document.getElementById('submitSecondRoundBtn');
@@ -128,6 +130,7 @@ const selectedBlackCardDiv = document.getElementById('selected-black-card');
 function showScreen(screen) {
     introductionScreen.classList.remove('visible');
     gameScreen.classList.remove('visible');
+    secondRoundIntroScreen.classList.remove('visible');
     secondRoundScreen.classList.remove('visible');
     gameOverScreen.classList.remove('visible');
 
@@ -139,6 +142,8 @@ function showScreen(screen) {
         secondRoundScreen.classList.add('visible');
     } else if (screen === 'gameover') {
         gameOverScreen.classList.add('visible');
+    } else if (screen === 'second-round-intro') {
+        secondRoundIntroScreen.classList.add('visible');
     }
 }
 
@@ -391,6 +396,9 @@ function submitSecondRound() {
 // Event listeners
 startGameBtn.addEventListener('click', startGame);
 nextRoundBtn.addEventListener('click', nextRound);
+secondRoundIntroBtn.addEventListener('click', () => {
+    showScreen('second-round-intro');
+});
 secondRoundBtn.addEventListener('click', () => {
     showScreen('second-round');
     renderSecondRound();

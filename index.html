@@ -17,15 +17,17 @@
     </div>
     <div class="container">
       <h1>Welcome to the Game!</h1>
-      <p>Inspired by Cards Against Humanity</p>
+      <p>Can you become the <b>Master Manipulator</b>?</p>
       <h2>Instructions:</h2>
       <div class="instruction-container">
         <ul>
-          <li>Select number of players and start the game.</li>
-          <li>Czar will select a black card. Host will click on a black card to select it.</li>
-          <li>Each player selects one white card, czar will decide which card is the best answer</li>
-          <li>Click "Next Round" for new cards or "End Game" to finish.</li>
+          <li>The Master Manipulator will click on a Black card with an incomplete headline to select it for the round</li>
+          <li>The rest of the players must decide which of the White cards allocated to them best fill in the headline</li>
+          <li>It’s then up to the Master Manipulator to choose who they think has created the most misleading headline! </li>
+          <li>Players can make their case—remember to leverage the common misinformation tactics in your headlines and explain to the Master Manipulator why people would fall for your persuasive tricks!</li>
+          <li>The Master Manipulator awards points by clicking on the White card(s) they deem to be the most manipulative</li>
         </ul>
+        <p>To begin, type the number of players into the box below and click “Start Game”</p>
       </div>
       <label for="numPlayers">Number of players: </label>
       <input type="number" id="numPlayers" min="2" value="2" style="width:50px;">
@@ -40,7 +42,7 @@
       <img src="uw-tips.png" alt="App Logo" id="logo">
     </div>
     <div class="container">
-      <h1>Game Screen</h1>
+      <h1>Round One</h1>
       <div id="black-cards-container"></div>
       <div id="chosen-black-card-section" style="display:none;">
         <h2>Chosen Black Card:</h2>
@@ -54,10 +56,33 @@
       <div id="players-container" class="players-container"></div>
 
       <div class="controls">
-        <button id="nextRoundBtn">Next Round</button>
-        <button id="secondRoundBtn">Second Round</button>
+        <button id="nextRoundBtn">Play Another Round</button>
+        <button id="secondRoundIntroBtn">End Game And Move On</button>
       </div>
     </div>
+  </div>
+
+  <div id = "second-round-intro-screen" class="screen">
+    <div class="logo-container">
+      <img src="uw-tips.png" alt="App Logo" id="logo">
+    </div>
+    <div class="container">
+      <h1>Round Two</h1>
+      <p>For Round Two, you’re working as a team! Instead of being a “Master Manipulator”,  you’ll work together to identify the tactics used by the headline and pick an appropriate “prebunk” to engage in productive conversation.</p>
+      <h2>Instructions: </h2>
+      <div class="instruction-container">
+        <ul>
+          <li>Read through all the cards to get a sense of what cards might go together!</li>
+          <li>The team will pick a black headline they want to debunk</li>
+          <li>Pick the white tactic card you think the headline best utilizes</li>
+          <li>Finally, decide on a grey “grounding truth”</li>
+          <li>Discuss all the three together - do they provide a compelling, non-antagonistic route to engaging with misleading or non-factual information?</li>
+          <li>Once you’ve decided, click “Submit” to see if you’ve successfully debunked the headline!</li>
+        </ul>
+      </div>
+      <button id="secondRoundBtn">Start Second Round</button>
+    </div>
+
   </div>
 
   <!-- Second Round Screen -->
@@ -66,7 +91,7 @@
       <img src="uw-tips.png" alt="App Logo" id="logo">
     </div>
     <div class="container">
-      <h1>Second Round</h1>
+      <h1>Round Two</h1>
       <div class="second-round-container">
         <!-- Left Side: Three Rows of Cards -->
         <div class="left-side">

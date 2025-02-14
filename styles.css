@@ -89,6 +89,13 @@ body {
     color: #000;
 }
 
+#chosen-white-cards {
+    display: flex;             /* Use flexbox */
+    flex-direction: row;       /* Align chosen cards in a row */
+    gap: 10px;                 /* Space between cards */
+    justify-content: center;   /* Center horizontally, optional */
+}
+
 .players-container {
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +107,7 @@ body {
     border: 1px solid #ccc;
     margin: 10px;
     padding: 15px;
-    width: 220px;
+    width: auto;
     background: #fff;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -155,6 +162,7 @@ button:hover {
 }
 
 .instruction-container {
+    
     text-align: left;
 }
 
@@ -207,6 +215,13 @@ button:hover {
     /* Include padding and border in the element's total width and height */
     cursor: pointer;
     /* Add pointer cursor to indicate clickability */
+}
+
+.white-card-container {
+    display: grid;                   /* Use CSS Grid */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;                       /* Spacing between cards */
+    max-width: auto;
 }
 
 #second-round-screen .selected-cards-container {

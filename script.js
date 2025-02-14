@@ -211,10 +211,33 @@ function renderGame() {
 
     // Render chosen white cards
     chosenWhiteCardsDiv.innerHTML = '';
+    /*
     chosenWhiteCards.forEach((c) => {
         const div = document.createElement('div');
         div.className = 'chosen-white-card';
         div.textContent = c;
+        chosenWhiteCardsDiv.appendChild(div);
+    });
+    */
+    chosenWhiteCards.forEach((chosen, index) => {
+        const { cardText, ownerIndex } = chosen;
+        
+        const div = document.createElement('div');
+        div.className = 'chosen-white-card';
+        div.textContent = cardText;
+    
+        // When the Master Manipulator clicks, award the point:
+        div.addEventListener('click', () => {
+            // Increase score for the card's owner
+            scores[ownerIndex] += 1;
+    
+            // (Optional) Remove this chosen card if only one can win:
+            chosenWhiteCards.splice(index, 1);
+    
+            // Re-render game to show updated scores
+            renderGame();
+        });
+    
         chosenWhiteCardsDiv.appendChild(div);
     });
 
@@ -266,8 +289,10 @@ function chooseWhiteCard(playerIndex, cardIndex) {
     if (!chosenBlackCard) return;
 
     const card = playerHands[playerIndex][cardIndex];
-    chosenWhiteCards.push(card);
-    scores[playerIndex] += 1;
+    chosenWhiteCards.push({
+        cardText: card,
+        ownerIndex: playerIndex
+    });
 
     // Remove card from player's hand
     playerHands[playerIndex].splice(cardIndex, 1);

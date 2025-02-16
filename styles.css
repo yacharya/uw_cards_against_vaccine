@@ -34,15 +34,15 @@ body {
     border-radius: 8px;
     padding: 10px;
     margin: 10px;
-    width: 200px;
     font-size: 14px;
     /*font-weight: bold;*/
     cursor: pointer;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     flex: 0 0 200px;
-    /* Fixed width for each card */
+    /* Fixed height and width for each card */
     height: 150px;
-    /* Fixed height for each card */
+    width: 200px;
+    
     display: flex;
     align-items: center;
     /* Center text vertically */
@@ -162,7 +162,6 @@ button:hover {
 }
 
 .instruction-container {
-    
     text-align: left;
 }
 
@@ -202,7 +201,8 @@ button:hover {
     /* Fixed width for each card */
     overflow-y: auto;
     padding: 10px;
-    height: 150px;
+    height: 175px;
+    width: 225px;
     /* Fixed height for each card */
     display: flex;
     align-items: center;
@@ -236,18 +236,18 @@ button:hover {
     color: #000;
     border: 2px solid #000;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 30px;
     text-align: center;
     font-size: 14px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
     margin: 10px;
-    width: 200px;
+    width: 225px;
     /*font-weight: bold;*/
     cursor: pointer;
     flex: 0 0 200px;
-    height: 150px;
+    height: 175px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,18 +260,18 @@ button:hover {
     color: #fff;
     border: 2px solid #000;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 30px;
     text-align: center;
     font-size: 14px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
     margin: 10px;
-    width: 200px;
+    width: 225px;
     /*font-weight: bold;*/
     cursor: pointer;
     flex: 0 0 200px;
-    height: 150px;
+    height: 175px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,11 +291,11 @@ button:hover {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
     margin: 10px;
-    width: 200px;
+    width: 225px;
     /*font-weight: bold;*/
     cursor: pointer;
     flex: 0 0 200px;
-    height: 150px;
+    height: 175px;
     display: flex;
     align-items: center;
     justify-content: center;

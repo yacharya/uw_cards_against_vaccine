@@ -5,7 +5,7 @@ const blackCardsCollection = [
     "Secret Government Plot? Experts Warn Monkey Pox Vaccine Could Lead To ___",
     "New Studies Claim Vaccines Cause ____. What does it mean for children?",
     "40% of People Experience ___ After Vaccination",
-    "One in Five ___ Agree That the Covid-19 Vaccine Leads to Fatigue",
+    "One in Five ___ Agree That Vaccines Leads to Fatigue",
     "Alarming Spike in ___ Following Booster Rollout",
     "Scientists Divided: Could HPV Vaccines Cause ___",
     "Popular Dentist Influencer Highlights Link Between Vaccines and ___",
@@ -16,10 +16,10 @@ const blackCardsCollection = [
     "___ Warns: Long-term Impacts of RSV Vaccine Still Unknown",
     "Official Data Reveals 10% Increase in ___ Following Vaccine Rollout",
     "Half of All Cancer Patients Show Signs of ___ Due to Vaccination",
-    "One in 9 ___ Admit They Regret Getting Covid Booster",
+    "One in 9 ___ Admit They Regret Getting Vaccine Boosters",
     "Popular YouTuber Says They’ve Uncovered “Proof” of Link Between Vaccines and ___",
     "Viral Post Warns of ___ Caused by Flu Vaccine",
-    "___ Question: Why Are They Pushing Covid Boosters So Hard?"
+    "___ Question: Why Are They Pushing Vaccine Boosters So Hard?"
 ];
 
 const whiteCardsCollection = [
@@ -67,15 +67,15 @@ const whiteCardsSecondRound = [
 const greyCardsSecondRound = [
     "Dentists are not experts in immunology or cardiology and so do not have the professional expertise to make such a claim. Further, there are no peer-reviewed studies linking vaccines to heart murmurs, instead there exists scientific consensus on the safety and efficacy of vaccines.",
     "Flu vaccines are designed to reduce the severity of illness and the risk of complications, not guarantee complete immunity. Some people can still contract a flu strain not covered by the vaccine or have partial protection due to individual immune response variability.",
-    "Headlines can often cherry pick survey results, the majority of people (in the survey mentioned in the headline) and in real life have no regrets post-vaccination. COVID boosters have been shown to reduce severe illness and save lives, as supported by extensive global studies.",
-    "Extensive research and clinical studies have shown that vaccines, including those for HPV and COVID-19, have no adverse effects on fertility in men or women. Most scientists agree on their safety and effectiveness in preventing HPV-related cancers.",
+    "Headlines can often cherry pick survey results, the majority of people (in the survey mentioned in the headline) and in real life have no regrets post-vaccination. Vaccine boosters have been shown to reduce severe illness and save lives, as supported by extensive global studies.",
+    "Extensive research and clinical studies have shown that vaccines, including those for HPV, have no adverse effects on fertility in men or women. Most scientists agree on their safety and effectiveness in preventing HPV-related cancers.",
     "Migraines can occur for many reasons and are not a known side effect of vaccines. While any health issue in children is concerning, headlines can often activate and weaponize our emotional responses, particularly focusing on our desire to protect vulnerable populations. "
 ];
 
 const blackCardsSecondRound = [
     "Popular Dentist Influencer Highlights Link Between Vaccines and Heart Murmurs",
     "25% of People Surveyed Still Get Flu After Getting Vaccinated—What Are We Not Being Told?",
-    "One in 9 Parents Admit They Regret Getting Covid Booster",
+    "One in 9 Parents Admit They Regret Getting Vaccine Boosters",
     "Scientists Divided: Could HPV Vaccines Cause Fertility Issues",
     "Heartbreaking Tragedy After Vaccination: Innocent Children Suffer Migraines"
 ];
@@ -232,7 +232,7 @@ function renderGame() {
             scores[ownerIndex] += 1;
     
             // (Optional) Remove this chosen card if only one can win:
-            chosenWhiteCards.splice(index, 1);
+            //chosenWhiteCards.splice(index, 1);
     
             // Re-render game to show updated scores
             renderGame();
